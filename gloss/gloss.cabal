@@ -80,11 +80,13 @@ Library
         Graphics.Gloss.Interface.IO.Game
         Graphics.Gloss.Interface.Environment
 
+        Graphics.Gloss.Internals.Interface.Backend.Types
+
   Other-modules:
         Graphics.Gloss.Internals.Color
         Graphics.Gloss.Internals.Interface.Animate.State
         Graphics.Gloss.Internals.Interface.Animate.Timing
-        Graphics.Gloss.Internals.Interface.Backend.Types
+        -- Graphics.Gloss.Internals.Interface.Backend.Types
         Graphics.Gloss.Internals.Interface.Callback
         Graphics.Gloss.Internals.Interface.Common.Exit
         Graphics.Gloss.Internals.Interface.Debug
@@ -104,7 +106,8 @@ Library
 
   If flag(GLUT)
     CPP-Options: -DWITHGLUT
-    Other-modules:
+    -- Other-modules:
+    Exposed-modules:
         Graphics.Gloss.Internals.Interface.Backend.GLUT
 
   If flag(GLFW)
